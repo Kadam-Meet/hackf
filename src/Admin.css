@@ -1,0 +1,153 @@
+.admin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f7f6; /* Consistent with global background */
+  font-family: 'Roboto', sans-serif;
+  padding: 20px;
+}
+
+.admin-card {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08); /* Softer, deeper shadow */
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.admin-card h2 {
+  color: #2c3e50; /* Consistent with global heading color */
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="text"],
+.form-group input[type="file"] {
+  width: calc(100% - 24px); /* Adjust for padding and border */
+  padding: 12px;
+  border: 1px solid #dcdcdc; /* Lighter border */
+  border-radius: 6px;
+  font-size: 1em;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus,
+.form-group input[type="text"]:focus,
+.form-group input[type="file"]:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.admin-button {
+  background-color: #3498db; /* Brand color */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.admin-button:active {
+  transform: translateY(0);
+}
+
+.admin-switch-link {
+  margin-top: 20px;
+  color: #7f8c8d; /* Consistent with body text */
+}
+
+.admin-switch-link a {
+  color: #3498db; /* Brand color */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.admin-switch-link a:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: #e74c3c; /* Red color for error messages */
+  font-size: 0.85em;
+  margin-top: 5px;
+  display: block;
+  text-align: left;
+}
+
+.password-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-input-container input {
+  padding-right: 40px; /* Make space for the icon */
+  width: calc(100% - 24px); /* Adjust for padding and border */
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #7f8c8d;
+  font-size: 1.1em;
+  transition: color 0.2s ease;
+}
+
+.password-toggle-icon:hover {
+  color: #2c3e50;
+}
+
+.otp-group {
+  margin-top: 25px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 25px;
+}
+
+.otp-input-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.otp-input-container input {
+  flex-grow: 1;
+  padding-right: 12px; /* Reset padding right for OTP input */
+}
+
+.otp-verify-button {
+  width: auto; /* Allow button to size based on content */
+  padding: 10px 15px;
+  font-size: 1em;
+  margin-top: 0; /* Align with input */
+}
