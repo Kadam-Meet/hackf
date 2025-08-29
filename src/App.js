@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import RoleSelection from './RoleSelection';
 import AdminLogin from './AdminLogin';
-import AdminRegister from './AdminRegister';
+import AdminRegister1 from './AdminRegister1';
 import AdminDashboard from './AdminDashboard';
 import UniversityLogin from './UniversityLogin'; // Will create these soon
 import UniversityRegister from './UniversityRegister';
@@ -74,7 +74,7 @@ function App() {
             <Route path="/" element={<RoleSelection />} />
             {/* Admin Routes */}
             <Route path="/admin/login" element={<AdminLogin />} />
-            <Route path="/admin/register" element={<AdminRegister />} />
+            <Route path="/admin/register" element={<AdminRegister1 />} />
             <Route
               path="/admin/dashboard"
               element={

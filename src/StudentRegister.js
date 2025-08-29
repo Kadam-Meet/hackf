@@ -80,26 +80,18 @@ const StudentRegister = () => {
 
   const handleRegister = async (e) => {
     e.preventDefault();
-    const res = await fetch('http://localhost:5000/api/register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            role: 'student',
-            name: studentName,
-            email,
-            password
-        })
+    const res = await fetch('http://localhost:5000/api/user/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        role: 'student', // or 'university', 'company', 'admin'
+        email,
+        password
+      })
     });
     const data = await res.json();
-    if (data.success) {
-        // Registration successful
-        alert('Student Registration successful!');
-        navigate('/student/login');
-    } else {
-        // Show error
-        alert('Registration failed. Please try again.');
-    }
-};
+    // handle response
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
