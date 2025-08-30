@@ -44,17 +44,13 @@ const AdminRegister1 = () => {
     if (!validateForm()) return;
 
     try {
-      const res = await fetch(`${API_URL}/api/user/register`, {
+      const res = await fetch('http://localhost:5000/api/user/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ role: 'admin', name, email, password, adminCode })
       });
-
-      if (!res.ok) {
-        throw new Error(`Server error: ${res.status}`);
-      }
-
       const data = await res.json();
+      console.log(data); // <-- Add this line to see the backend error
 
       if (data.success) {
         setMessage('OTP sent to your email. Please verify it.');
